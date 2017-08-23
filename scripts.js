@@ -25,6 +25,11 @@ $(document).ready(function(){
 		$(".control-label").removeClass("text-right");
 		$(".yorn").removeClass("radio").addClass("radio-inline").addClass("text-center");
 	}
+
+	// background image carousel
+	setInterval(function(){
+		$(".site-wrapper").toggleClass('altbg');
+	}, 60000);
 });
 
 
@@ -62,9 +67,3 @@ $(".prequal-fwd").click(function(){
 	$(this).parent().slideUp();
 	$(this).parent().next(".form-group.optional").slideDown();
 });
-
-
-
-// background image carousel, if desired
-
-

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Carter+One');
+
 /*** Globals ***/
 
 /* Links */
@@ -36,8 +38,19 @@ h2 { font-size: 32px; }
 span.required {
   font-size: 75%;
   font-style: italic;
-  color: #fa0;
+  color: #a32737;
+  text-shadow: none;
 }
+
+h1.cover-heading { color: #a32737; font-family: 'Carter One', sans }
+h2.cover-heading { color: #337ab7; font-family: 'Carter One', sans; }
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #a32737;
+  border-color: #88222f;
+}
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -46,9 +59,14 @@ span.required {
   height: 100%; /* For at least Firefox */
   min-height: 100%;
   background: url("wenatchee-from-ohme-lookout.jpg") no-repeat center fixed;
+  transition: background 1s linear;
+  -webkit-transition: background 1s linear;
   background-size: cover;
   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper.altbg {
+  background-image: url('wenatchee.jpg');
 }
 .site-wrapper-inner {
   display: table-cell;
