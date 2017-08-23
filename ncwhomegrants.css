@@ -1,0 +1,145 @@
+/*** Globals ***/
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/*** Base structure ***/
+html,
+body {
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 3px 3px 5px #000000;
+  font-size: 18px;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 32px; }
+
+span.required {
+  font-size: 75%;
+  font-style: italic;
+  color: #fa0;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background: url("wenatchee-from-ohme-lookout.jpg") no-repeat center fixed;
+  background-size: cover;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*** Cover ***/
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/*** Footer ***/
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+  font-size: .8em;
+}
+
+
+/*** Affix and center ***/
+@media (min-width: 768px) {
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .mastfoot,
+  .cover-container {
+    width: 900px;
+  }
+}
+
+
+/*** Form ***/
+#theForm {
+  display: none;
+  width: 100%;
+}
+
+#theForm .optional {
+  display: none;
+}
+
+.prequal-notice {
+  display: none;
+}
+
+.form-group {
+  padding-bottom: 20px;
+  border-bottom: 1px dotted white;
+}
+
+label.control-label {
+  padding-top: 15px;
+}
+.control-label p {
+  font-weight: 100;
+  font-style: italic;
+  font-size: 95%;
+}
+
+.alert, .prequal-nav {
+  text-shadow: none;
+}
+
+.prequal-nav {
+  margin: 15px 0;
+}
+
+#phone {
+  display: inline;
+}
