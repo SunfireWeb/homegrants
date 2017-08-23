@@ -7,7 +7,7 @@ function clean($data) {
 	return $data;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") /* && ($_SERVER['HTTP_REFERRER'] == 'https://www.wahomegrants.com')) */ {
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 	$results = "request method = post";
 
@@ -233,10 +233,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") /* && ($_SERVER['HTTP_REFERRER'] == 'h
 
 
 	if(empty($errmsg)) {
-		// message one = email to Skip and Traci
+		// message one = email to site owners
 		$results = "No error messages - proceed to build. \r\n";
 		
-		$to1 = "skip@agent509.com, tdry@guildmortgage.net";
+		$to1 = /*insert receiving email address here*/;
 
 		$subject1 = "Form submission from WAHomeGrants.com";
 
@@ -289,19 +289,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") /* && ($_SERVER['HTTP_REFERRER'] == 'h
 
 			$message2 .= "A certified loan professional will be in touch with you directly within 2 business days.";
 
-			$headers2  = "From: WAHomeGrants.com <skip@agent509.com>\r\n";	
-			$headers2 .= "Reply-To: skip@agent509.com\r\n";
-
 			$mail2status = mail($to2, $subject2, $message2, $headers2);
 			if($mail2status == 1) { $results .= " Second message sent."; }
 
 		} else { // mail 1 not sent
 			$results = $errmsg;
 		}
-
-
-	// possibly add later: message three = delayed by one hour; details about who Skip is and the process
-
 
 	// if error messages present and message not created
 	} else {
