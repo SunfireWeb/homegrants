@@ -77,7 +77,19 @@
 
                 <!-- income, debt, history -->
                 <div class="form-group form-group-lg optional" id="opt1" role="group">
-                  <label for="income" class="control-label col col-sm-6 text-right"><span class="label label-default">[1/10]</span> Estimated total monthly <strong>gross</strong> income: <p>Include income from Co-Buyer, if there is one.</p></label>
+                  <label for="down" class="control-label col text-right col-sm-6"><span class="label label-default">[1/10]</span> How much do you currently have available for a down payment?</label>
+                  <div class="col col-sm-6 radio text-left" id="down">
+                    <label class="radio"><input type="radio" name="down" value="a">$0 - $2000</label>
+                    <label class="radio"><input type="radio" name="down" value="b">$2000 - $4000</label>
+                    <label class="radio"><input type="radio" name="down" value="c">$4000 - $6000</label>
+                    <label class="radio"><input type="radio" name="down" value="d">Over $6000</label>
+                    <label class="radio"><input type="radio" name="down" value="e">Unsure</label>
+                  </div>
+                  <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
+                </div>
+
+                <div class="form-group form-group-lg optional" id="opt2" role="group">
+                  <label for="income" class="control-label col col-sm-6 text-right"><span class="label label-default">[2/10]</span> Estimated total monthly <strong>gross</strong> income: <p>Include income from Co-Buyer, if there is one.</p></label>
                   
                   <div class="col col-sm-6 text-left radio" id="income">
                     <label class="radio"><input type="radio" name="income" value="a">Under $2500</label>
@@ -86,11 +98,12 @@
                     <label class="radio"><input type="radio" name="income" value="d">Over $6000</label>
                     <label class="radio"><input type="radio" name="income" value="e">Unsure / Unknown</label>
                   </div>
+                  <a class="btn btn-default prequal-nav prequal-back">&lt;&lt; <b>Back</b></a>
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <div class="form-group form-group-lg optional" id="opt2" role="group">
-                  <label for="debt" class="control-label col col-sm-6 text-right"><span class="label label-default">[2/10]</span> Estimated total revolving debts: <p>This includes credit card payments, monthly installment payments, child support, etc. This does NOT include current utilities and rent/mortgage.</p></label>
+                <div class="form-group form-group-lg optional" id="opt3" role="group">
+                  <label for="debt" class="control-label col col-sm-6 text-right"><span class="label label-default">[3/10]</span> Estimated total revolving debts: <p>This includes credit card payments, monthly installment payments, child support, etc. This does NOT include current utilities and rent/mortgage.</p></label>
                   
                   <div class="col col-sm-6 text-left radio" id="debt">
                     <label class="radio"><input type="radio" name="debt" value="a">Under $500</label>
@@ -103,8 +116,8 @@
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <div class="form-group form-group-lg optional" id="opt3" role="group">
-                  <label for="score" class="control-label col col-sm-6 text-right"><span class="label label-default">[3/10]</span> Estimated FICO credit score: </label>
+                <div class="form-group form-group-lg optional" id="opt4" role="group">
+                  <label for="score" class="control-label col col-sm-6 text-right"><span class="label label-default">[4/10]</span> Estimated FICO credit score: </label>
                   <div class="col col-sm-6 radio text-left" id="score">
                     <label class="radio"><input type="radio" name="score" value="a">Under 600</label>
                     <label class="radio"><input type="radio" name="score" value="b">600 - 649</label>
@@ -116,8 +129,8 @@
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <div class="form-group form-group-lg optional" id="opt4" role="group">
-                  <label for="late" class="control-label col col-sm-6 text-right"><span class="label label-default">[4/10]</span> Have you made any late payments in the last 12 months?</label>
+                <div class="form-group form-group-lg optional" id="opt5" role="group">
+                  <label for="late" class="control-label col col-sm-6 text-right"><span class="label label-default">[5/10]</span> Have you made any late payments in the last 12 months?</label>
                   <div class="col col-sm-6 radio text-left" id="late">
                     <label class="radio yorn"><input type="radio" name="late" value="y">Yes</label>
                     <label class="radio yorn"><input type="radio" name="late" value="n">No</label>
@@ -126,8 +139,9 @@
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <div class="form-group form-group-lg optional" id="opt5" role="group">
-                  <label for="bankrupt" class="control-label col col-sm-6 text-right"><span class="label label-default">[5/10]</span> Have you filed bankruptcy in the last 7 years?</label>
+                <!-- selling, purchasing -->
+                <div class="form-group form-group-lg optional" id="opt6" role="group">
+                  <label for="bankrupt" class="control-label col col-sm-6 text-right"><span class="label label-default">[6/10]</span> Have you filed bankruptcy in the last 7 years?</label>
                   <div class="col col-sm-6 radio text-left" id="bankrupt">
                     <label class="radio yorn"><input type="radio" name="bankrupt" value="y">Yes</label>
                     <label class="radio yorn"><input type="radio" name="bankrupt" value="n">No</label>
@@ -136,9 +150,8 @@
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <!-- selling, purchasing -->
-                <div class="form-group form-group-lg optional" id="opt6" role="group">
-                  <label for="selling" class="control-label col col-sm-6 text-right"><span class="label label-default">[6/10]</span> Are you selling a home?</label>
+                <div class="form-group form-group-lg optional" id="opt7" role="group">
+                  <label for="selling" class="control-label col col-sm-6 text-right"><span class="label label-default">[7/10]</span> Are you selling a home?</label>
                   <div class="col col-sm-6 radio text-left" id="selling">
                     <label class="radio yorn"><input type="radio" name="selling" value="y">Yes</label>
                     <label class="radio yorn"><input type="radio" name="selling" value="n">No</label>
@@ -147,25 +160,12 @@
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
                 </div>
 
-                <div class="form-group form-group-lg optional" id="opt7" role="group">
-                  <label for="buynow" class="control-label col col-sm-6 text-right"><span class="label label-default">[7/10]</span> Are you ready to buy a new home within the next 90 days?</label>
+                <div class="form-group form-group-lg optional" id="opt8" role="group">
+                  <label for="buynow" class="control-label col col-sm-6 text-right"><span class="label label-default">[8/10]</span> Are you ready to buy a new home within the next 90 days?</label>
                   <div class="col col-sm-6 radio text-left" id="buynow">
                     <label class="radio yorn"><input type="radio" name="buynow" value="y">Yes</label>
                     <label class="radio yorn"><input type="radio" name="buynow" value="n">No</label>
                     <label class="radio yorn"><input type="radio" name="buynow" value="u">Unsure</label>
-                  </div>
-                  <a class="btn btn-default prequal-nav prequal-back">&lt;&lt; <b>Back</b></a>
-                  <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
-                </div>
-
-                <div class="form-group form-group-lg optional" id="opt8" role="group">
-                  <label for="down" class="control-label col text-right col-sm-6"><span class="label label-default">[8/10]</span> How much do you currently have available for a down payment?</label>
-                  <div class="col col-sm-6 radio text-left" id="down">
-                    <label class="radio"><input type="radio" name="down" value="a">Less than $2000</label>
-                    <label class="radio"><input type="radio" name="down" value="b">$2000 - $4000</label>
-                    <label class="radio"><input type="radio" name="down" value="c">$4000 - $6000</label>
-                    <label class="radio"><input type="radio" name="down" value="d">Over $6000</label>
-                    <label class="radio"><input type="radio" name="down" value="e">Unsure</label>
                   </div>
                   <a class="btn btn-default prequal-nav prequal-back">&lt;&lt; <b>Back</b></a>
                   <a class="btn btn-default prequal-nav prequal-fwd"><b>Next / Skip</b> &gt;&gt;</a>
